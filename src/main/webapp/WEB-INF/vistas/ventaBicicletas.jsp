@@ -7,8 +7,13 @@
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	</head>
 	<body>
+		<header>
+			<%@include file='partial/menu.jsp' %>
+		</header>
 		<div class = "container">
-			<h1>Perfil de Usuario</h1>
+			<div id="loginbox" style="margin-top:150px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<h1>EN CONSTRUCCION!</h1>
+			</div>
 		</div>
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
