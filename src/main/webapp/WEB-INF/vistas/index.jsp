@@ -24,7 +24,7 @@
 			    	<h3 class="form-signin-heading">Bienvenido a EnBiciados </h3>
 					<hr class="colorgraph"><br>
 					
-					<button class="btn btn-lg btn-primary btn-block" Type="Submit"/><a style="color:black" href="ventaBicicletas">Venta</a></button>
+					<button class="btn btn-lg btn-primary btn-block" Type="Submit"/><a style="color:black;" href="ventaBicicletas">Venta</a></button>
 					<button class="btn btn-lg btn-primary btn-block" Type="Submit"/><a style="color:black" href="alquilerBicicletas">Alquiler</a></button>
 					<button class="btn btn-lg btn-primary btn-block" Type="Submit"/><a style="color:black" href="perfilUsuario">Usuario</a></button>
 					

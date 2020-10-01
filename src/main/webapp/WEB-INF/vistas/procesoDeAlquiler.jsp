@@ -5,6 +5,11 @@
 	    <link href="css/bootstrap.min.css" rel="stylesheet" >
 	    <!-- Bootstrap theme -->
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	    <script type="text/javascript">
+	    	function confirmar(){
+	    		alert("El proceso se realizo con exito!");
+	    	}
+	    </script>
 	</head>
 	<body>
 		<header>
@@ -13,18 +18,18 @@
 		<div class = "container">
 			<div id="loginbox" style="margin-top:150px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 				<h1>PROCESO DE ALQUILER</h1><br>
-				<form action="/action_page.php">
+				<form action="">
 					<div class="form-group">
 					    <label for="name">Nombre:</label>
-					    <input type="text" class="form-control" id="name">
+					    <input type="text" class="form-control" id="name" required="required">
 					</div>
 					<div class="form-group">
 					    <label for="surname">Apellido:</label>
-					    <input type="text" class="form-control" id="surname">
+					    <input type="text" class="form-control" id="surname" required="required">
 					</div>
 				  	<div class="form-group">
 					    <label for="dni">DNI:</label>
-					    <input type="text" class="form-control" id="surname">
+					    <input type="text" class="form-control" id="surname" required="required">
 				 	</div>
 					<div class="form-group">
 					    <label for="selectPayment">Selecciona forma de pago</label>
@@ -32,16 +37,16 @@
 					      <option>VISA</option>
 					      <option>MASTERCARD</option>
 					      <option>DEBITO VISA</option>
-					      <option>MERCADOPAGO</option>
-					      <option>RINION</option>
+					      <option>MERCADO PAGO</option>
+					      <option>EFECTIVO</option>
 					    </select>
 					</div>
-					<label for="selectPayment">Selecciona forma de pago</label>
+					<label for="selectPayment">Selecciona tiempo de alquiler</label>
 					<label class="radio"><input type="radio" name="firstOption" checked>Medio dia --- $300</label>
 					<label class="radio"><input type="radio" name="secondOption">1 dia --- $500</label>
 					<label class="radio"><input type="radio" name="thirdOption">3 dias --- $1000</label> 
 				  
-				 	 <button type="submit" class="btn btn-default">Confirmar</button>
+				 	 <button type="submit" class="btn btn-default" onclick="confirmar()">Confirmar</button>
 				</form> 
 			</div>
 		</div>
