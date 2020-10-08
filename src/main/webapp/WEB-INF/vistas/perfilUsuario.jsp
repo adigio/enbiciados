@@ -7,7 +7,7 @@
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	</head>
 	<body>
-	<header>
+		<header>
 			<%@include file='partial/menu.jsp' %>
 		</header>
 		<div class = "container">

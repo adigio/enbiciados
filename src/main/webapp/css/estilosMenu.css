@@ -41,12 +41,13 @@ header .aMotos{
     width: 10px;
     padding-left: 5px;
 }
-.aPromociones{
+.aPromociones, .aContacto{
     border: solid 0.5px white;
     border-top: none;
     border-bottom: none;
     border-left: none;
 }
+
 header nav ul li a:hover{
  transition: 0.5s;
  background: rgba(0,0,0,0.3);

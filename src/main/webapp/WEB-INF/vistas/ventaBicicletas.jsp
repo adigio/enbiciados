@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<!-- Bootstrap core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet" >
-	    <!-- Bootstrap theme -->
-	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<%@include file='partial/head.jsp'%>
 	</head>
 	<body>
 		<header>

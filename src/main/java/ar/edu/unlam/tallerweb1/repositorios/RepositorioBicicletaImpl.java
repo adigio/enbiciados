@@ -11,8 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 @Repository("repositorioBicicleta")
 public class RepositorioBicicletaImpl implements RepositorioBicicleta {
 
@@ -23,6 +21,7 @@ public class RepositorioBicicletaImpl implements RepositorioBicicleta {
 		this.sessionFactory = sessionFactory;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public List<Bicicleta> obtenerBicicletaAlquiler() {
 

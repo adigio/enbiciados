@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -40,6 +41,11 @@ public class ControladorIndex {
 		// Se va a la vista login (el nombre completo de la lista se resuelve utilizando el view resolver definido en el archivo spring-servlet.xml)
 		// y se envian los datos a la misma  dentro del modelo
 		return new ModelAndView("index", modelo);
+	}
+	
+	@RequestMapping("/login")
+	public ModelAndView login() {		
+		return new ModelAndView("login", Collections.singletonMap("usuario", new Usuario()));
 	}
 
 
@@ -70,11 +76,6 @@ public class ControladorIndex {
 			modelo.put("error", "Usuario o clave incorrecta");
 		}
 		return new ModelAndView("alquilerBicicletas");
-	}
-	
-	@RequestMapping(path = "/perfilUsuario", method = RequestMethod.GET)
-	public ModelAndView irAPerfilUsuario() {
-		return new ModelAndView("perfilUsuario");
 	}
 	
 	@RequestMapping(path = "/procesoDeAlquiler", method = RequestMethod.GET)
