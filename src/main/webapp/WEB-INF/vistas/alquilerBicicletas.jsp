@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,43 +19,18 @@
 			        <h1>ALQUILER</h1>
 			    </div>
         
-    <div class="centroMotos">
-        <div class="moto">
-            <div class="imgMoto">
-                <img class="imagen" src="img/bici1.jpg">
+    <div class="centroBicis">
+
+    	<c:forEach items="${bicicleta}" var="BICI">
+    	<div class="bici">
+            <div class="imgBici">
+                <img class="imagen" src="${BICI.imagen}">
             </div>
-            <h3 style="float: right;">Rod 28</h3>
-            <h3>RUTA</h3>
-            <h3>GT TRAFFIC 230</h3>
+            <h3 style="float: right;">${BICI.descripcion}</h3>
+            <h3>${BICI.tipo }</h3>
             <a href="procesoDeAlquiler">ALQUILAR</a>
-        </div>    
-        <div class="moto">
-            <div class="imgMoto">
-                <img class="imagen" src="img/bici1.jpg">
-            </div>
-            <h3 style="float: right;">Rod 29</h3>
-            <h3>URBANA</h3>
-            <h3>UR PARTY 434</h3>
-            <a href="procesoDeAlquiler">ALQUILAR</a>
-        </div>    
-        <div class="moto">
-            <div class="imgMoto">
-                <img class="imagen" src="img/bici1.jpg">
-            </div>
-            <h3 style="float: right;">Ro 26</h3>
-            <h3>URBANA</h3>
-            <h3>SPY RIDDER</h3>
-            <a href="procesoDeAlquiler">ALQUILAR</a>
-        </div>    
-        <div class="moto">
-            <div class="imgMoto">
-                <img class="imagen" src="img/bici1.jpg">
-            </div>
-            <h3 style="float: right;">Ro 28</h3>
-            <h3>RUTA</h3>
-            <h3>SHIMANO 3x7</h3>
-            <a href="procesoDeAlquiler">ALQUILAR</a>
-        </div>    
+        </div>
+		</c:forEach>
         
     </div>
     </div>

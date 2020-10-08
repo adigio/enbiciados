@@ -1,7 +1,9 @@
 package ar.edu.unlam.tallerweb1.controladores;
 
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
+import ar.edu.unlam.tallerweb1.modelo.Bicicleta;
 import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
+import ar.edu.unlam.tallerweb1.servicios.ServicioBicicleta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,16 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class ControladorIndex {
 
 	private ServicioLogin servicioLogin;
+	private ServicioBicicleta servicioBicicleta;
 
 	@Autowired
-	public ControladorIndex(ServicioLogin servicioLogin){
+	public ControladorIndex(ServicioLogin servicioLogin, ServicioBicicleta servicioBicicleta){
 		this.servicioLogin = servicioLogin;
+		this.servicioBicicleta = servicioBicicleta;
 	}
 
 	// Este metodo escucha la URL localhost:8080/NOMBRE_APP/login si la misma es invocada por metodo http GET
@@ -51,6 +57,18 @@ public class ControladorIndex {
 	
 	@RequestMapping(path = "/alquilerBicicletas", method = RequestMethod.GET)
 	public ModelAndView irAAlquilerBicicletas() {
+		List<Bicicleta> listadoBicicleta = servicioBicicleta.obtenerBicicletaAlquiler();
+		ModelMap modelo = new ModelMap();
+		
+		System.out.println(listadoBicicleta);
+		if (!listadoBicicleta.isEmpty()) {
+				modelo.put("bicicleta", listadoBicicleta);
+			
+			return new ModelAndView("alquilerBicicletas",modelo);
+		} else {
+			// si el usuario no existe agrega un mensaje de error en el modelo.
+			modelo.put("error", "Usuario o clave incorrecta");
+		}
 		return new ModelAndView("alquilerBicicletas");
 	}
 	
